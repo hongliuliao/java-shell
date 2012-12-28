@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * @author hongliuliao
  *
- * createTime:2012-12-28 ÉÏÎç9:53:51
+ * createTime:2012-12-28 ä¸Šåˆ9:53:51
  */
 public class CodeContainer {
 

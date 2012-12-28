@@ -15,7 +15,7 @@ import javax.tools.ToolProvider;
 /**
  * @author hongliuliao
  *
- * createTime:2012-12-28 ÉÏÎç10:31:55
+ * createTime:2012-12-28 ä¸Šåˆ10:31:55
  */
 public class CodeRunner {
 	

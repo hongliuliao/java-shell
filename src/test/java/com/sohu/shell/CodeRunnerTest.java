@@ -8,7 +8,7 @@ import org.junit.Test;
 /**
  * @author hongliuliao
  *
- * createTime:2012-12-28 ÉÏÎç10:56:58
+ * createTime:2012-12-28 ä¸Šåˆ10:56:58
  */
 public class CodeRunnerTest {
 

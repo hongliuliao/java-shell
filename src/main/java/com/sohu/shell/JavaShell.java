@@ -9,7 +9,7 @@ import java.util.Scanner;
 /**
  * @author hongliuliao
  *
- * createTime:2012-12-28 ÉÏÎç11:52:37
+ * createTime:2012-12-28 ä¸Šåˆ11:52:37
  */
 public class JavaShell {
 	
