@@ -1,0 +1,1 @@
+import java.util.List;\npublic static void main(String[] args) throws Exception{	}

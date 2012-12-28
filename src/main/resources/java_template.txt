@@ -1,0 +1,9 @@
+${IMPORT_CODES}
+
+public class ${CLASS_NAME} {
+
+	public static void main(String[] args) throws Exception{
+		${CODES_IN_MAIN}
+	}
+}
+
