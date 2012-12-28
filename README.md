@@ -10,10 +10,10 @@ java-shell
 	基于源代码:
 		1.git clone git@github.com:hongliuliao/java-shell.git
 		2.mvn clean package
-	直接下载:
+	直接下载(需要iteye账号):
 		http://dl.iteye.com/topics/download/fe7e05a0-128e-3d39-8338-0b0ba0fb4a7f
                 
-二.将生成的jar加入path
+二.将获取到的jar加入path
 
 三.执行代码
 
