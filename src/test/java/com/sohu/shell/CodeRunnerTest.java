@@ -14,13 +14,17 @@ public class CodeRunnerTest {
 
 	CodeRunner runner = new CodeRunner();
 	
-	@Test
-	public void testRun() {
-		runner.run(ClassLoader.getSystemResource("TestClass.class").getPath(), "TestClass");
-	}
+	CodeGenerator codeGenerator = new CodeGenerator();
+	
+	CodeContainer codeContainer = new CodeContainer();
 	
 	@Test
-	public void testCompileByFileName() {
-		this.runner.compile("TestClass.java");
+	public void testCompile() {
+		codeContainer.addCode("System.out.println(\"haha\");");
+		codeContainer.setClassName("Test");
+		String javaCode = codeGenerator.generator(codeContainer);
+		String basePath = CodeRunnerTest.class.getClassLoader().getResource("").getPath();
+		runner.compile(basePath + "Test.java", javaCode);
 	}
+	
 }

@@ -20,6 +20,11 @@ public class CodeGenerator {
 		loadTemplateFromFile();
 	}
 	
+	/**
+	 * generator java code from codeContainer
+	 * @param codeContainer
+	 * @return the java code
+	 */
 	public String generator(CodeContainer codeContainer) {
 		String importCodeLines = "";
 		if(codeContainer.getImportCodes() != null) {

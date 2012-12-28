@@ -29,9 +29,9 @@ public class CodeRunner {
 		return result == 0;
 	}
 	
-	public void run(String filePath, String className) {
+	public void loadClassAndRun(String filePath, String className) {
 		try {
-			Class<?> runClass = getClass(className, readFileToBytes(filePath));
+			Class<?> runClass = loadClass(className, readFileToBytes(filePath));
 			Method mainMethod = runClass.getDeclaredMethod("main", String[].class);
 			Object arg = new String[] {};
 			mainMethod.invoke(null, arg);
@@ -52,7 +52,7 @@ public class CodeRunner {
 		
 	}
 	
-	public Class<?> getClass(String classFileName, byte[] code){
+	public Class<?> loadClass(String classFileName, byte[] code){
 		try {
 			Class<?> clazz = Class.forName("java.lang.ClassLoader");
 			Method m = clazz.getDeclaredMethod("defineClass", byte[].class, int.class, int.class);

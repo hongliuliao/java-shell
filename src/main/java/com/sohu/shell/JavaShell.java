@@ -46,7 +46,7 @@ public class JavaShell {
 			this.codeContainer.removeCode(line);
 			return;
 		}
-		codeRunner.run(basePath + className + ".class", className);
+		codeRunner.loadClassAndRun(basePath + className + ".class", className);
 		
 	}
 
