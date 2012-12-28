@@ -3,6 +3,7 @@
  */
 package com.sohu.shell;
 
+import java.io.File;
 import java.util.Scanner;
 
 /**
@@ -36,7 +37,8 @@ public class JavaShell {
 			codeContainer.addCode(line);
 		}
 		buildTimes ++;
-		String basePath = ClassLoader.getSystemResource("").getPath();
+		String basePath = JavaShell.class.getProtectionDomain().getCodeSource().getLocation().getPath() + "/../generate/";
+		this.buildGenerateFolder(basePath);
 		String className = tempFileName + buildTimes;
 		codeContainer.setClassName(className);
 		
@@ -48,6 +50,13 @@ public class JavaShell {
 		}
 		codeRunner.loadClassAndRun(basePath + className + ".class", className);
 		
+	}
+	
+	public void buildGenerateFolder(String path) {
+		File file = new File(path);
+		if(!file.exists()) {
+			file.mkdir();
+		}
 	}
 
 	public static void main(String[] args) {

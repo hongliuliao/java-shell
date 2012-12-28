@@ -4,7 +4,7 @@
 package com.sohu.shell;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.InputStreamReader;
 import java.util.List;
 
 /**
@@ -52,7 +52,7 @@ public class CodeGenerator {
 	private static void loadTemplateFromFile() {
 		BufferedReader reader = null;
 		try {
-			reader = new BufferedReader(new FileReader(ClassLoader.getSystemResource("java_template.txt").getPath()));
+			reader = new BufferedReader(new InputStreamReader(CodeGenerator.class.getResourceAsStream("/java_template.txt")));
 			String line = null;
 			while((line = reader.readLine()) != null) {
 				CODE_TEMPLATE = CODE_TEMPLATE + line + "\n";
