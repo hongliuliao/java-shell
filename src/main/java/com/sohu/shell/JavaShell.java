@@ -60,7 +60,7 @@ public class JavaShell {
 	}
 	
 	public static void printlnSign() {
-		System.out.print(">");
+		System.out.print(">>>");
 	}
 
 	public static void main(String[] args) {
