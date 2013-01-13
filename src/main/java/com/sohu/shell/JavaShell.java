@@ -58,14 +58,22 @@ public class JavaShell {
 			file.mkdir();
 		}
 	}
+	
+	public static void printlnSign() {
+		System.out.println(">");
+	}
 
 	public static void main(String[] args) {
-		JavaShell shell = new JavaShell();
+		System.out.println("Welcome to use jshell!");
+		printlnSign();
 		
-		Scanner in = new Scanner(System.in);
-		while(in.hasNext()) {
-			String line = in.nextLine();
+		JavaShell shell = new JavaShell();
+		Scanner scanner = new Scanner(System.in);
+		
+		while(scanner.hasNext()) {
+			String line = scanner.nextLine();
 			shell.handleInput(line);
+			printlnSign();
 		}
 	}
 }
