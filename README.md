@@ -20,13 +20,13 @@ java-shell
 	java -jar java-shell-0.0.1-SNAPSHOT.jar
         
 	之后就可以输入代码了,例如输入如下代码
-	import java.util.List;
-	import java.util.ArrayList;
+	>>>import java.util.List;
+	>>>import java.util.ArrayList;
 	
-	List<String> list = new ArrayList<String>();
-	list.add("test1"); 
-	list.add("test2"); 
-	System.out.println(list);
+	>>>List<String> list = new ArrayList<String>();
+	>>>list.add("test1"); 
+	>>>list.add("test2"); 
+	>>>System.out.println(list);
 	
 	之后会看到控制台输出的内容...
 	也可以到https://github.com/hongliuliao/java-shell/wiki看看运行效果
