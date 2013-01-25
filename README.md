@@ -29,7 +29,7 @@ java-shell
 	>>>System.out.println(list);
 	
 	之后会看到控制台输出的内容...
-	也可以到https://github.com/hongliuliao/java-shell/wiki看看运行效果
+	也可以到[wiki](https://github.com/hongliuliao/java-shell/wiki)看看运行效果
 	
 实现原理:
 
