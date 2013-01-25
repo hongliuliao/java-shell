@@ -29,8 +29,10 @@ java-shell
 	>>>System.out.println(list);
 	
 	之后会看到控制台输出的内容...
-	也可以到[wiki](https://github.com/hongliuliao/java-shell/wiki)看看运行效果
-	
+
+
+![运行效果](https://a248.e.akamai.net/camo.github.com/e17187a99599fb3dd8c1e8b280a94a0e96cc0e15/687474703a2f2f646c2e69746579652e636f6d2f75706c6f61642f6174746163686d656e742f303037382f353338322f62626163646164322d343435342d333039392d386561392d3063616638346235303964352e6a7067)
+
 实现原理:
 
 	1.编译输入内容,并会将编译的内容放到generate文件夹
