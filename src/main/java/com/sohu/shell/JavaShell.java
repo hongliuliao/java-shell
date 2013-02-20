@@ -3,8 +3,10 @@
  */
 package com.sohu.shell;
 
+import java.io.BufferedReader;
 import java.io.File;
-import java.util.Scanner;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 /**
  * @author hongliuliao
@@ -60,18 +62,17 @@ public class JavaShell {
 	}
 	
 	public static void printlnSign() {
-		System.out.print(">>>");
+		System.out.print(">>> ");
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		System.out.println("Welcome to use jshell!");
 		printlnSign();
 		
 		JavaShell shell = new JavaShell();
-		Scanner scanner = new Scanner(System.in);
-		
-		while(scanner.hasNext()) {
-			String line = scanner.nextLine();
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		String line = null;
+		while((line = reader.readLine()) != null) {
 			shell.handleInput(line);
 			printlnSign();
 		}

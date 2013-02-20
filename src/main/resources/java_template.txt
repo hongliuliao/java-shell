@@ -6,8 +6,8 @@ public class ${CLASS_NAME} {
 		${CODES_IN_MAIN}
 	}
 	
-	public static void print(String str) {
-		System.out.println(str);
+	public static void print(Object obj) {
+		System.out.println(obj);
 	}
 }
 
