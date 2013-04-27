@@ -60,4 +60,21 @@ public class CodeContainer {
 		this.codes.remove(line);
 	}
 	
+	public void removePrintCodes() {
+		List<String> printCodes = new ArrayList<String>();
+		for (String code : codes) {
+			if(containPrint(code)) {
+				printCodes.add(code);
+			}
+		}
+		this.codes.removeAll(printCodes);
+	}
+	
+	private boolean containPrint(String code) {
+		if(code == null) {
+			return false;
+		}
+		return code.trim().startsWith("System.out.println(") || code.trim().startsWith("print(");
+	}
+	
 }

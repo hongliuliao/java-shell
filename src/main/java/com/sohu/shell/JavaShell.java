@@ -8,6 +8,8 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import com.sohu.shell.command.CommandsHolder;
+
 /**
  * @author hongliuliao
  *
@@ -21,6 +23,8 @@ public class JavaShell {
 	
 	CodeRunner codeRunner = new CodeRunner();
 	
+	CommandsHolder commandsHolder = new CommandsHolder();
+	
 	String tempFileName = "Temp";
 	
 	int buildTimes = 0;
@@ -29,8 +33,9 @@ public class JavaShell {
 		if(line.trim().equals("")) {
 			return;
 		}
-		if(line.trim().equals("exit")) {
-			System.exit(0);
+		
+		if(commandsHolder.effect(line, codeContainer)) {
+			return;
 		}
 		
 		if(line.trim().startsWith("import")) {
