@@ -26,7 +26,7 @@ public class CodeRunner {
 	public boolean compile(String javaFilePath) {
 		JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
 		if(compiler == null) {
-			throw new RuntimeException("JavaCompiler not found!please set 'java.home' property to JDK patch !");
+			throw new RuntimeException("JavaCompiler not found!please set 'java.home' property to JDK path !");
 		}
 		int result = compiler.run(null, null, null, javaFilePath);
 		return result == 0;
